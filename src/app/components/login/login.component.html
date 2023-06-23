@@ -1,0 +1,36 @@
+<app-login-out></app-login-out>
+<div style="margin-top: 40px; margin-bottom: -80px;"></div>
+<div class="main-div py-5">
+    
+    <form class="mx-auto"  #form="ngForm" (ngSubmit)="login(form)">
+        <mat-card>
+            <mat-card-header><h2>Ingresar a mi cuenta</h2></mat-card-header>
+            <mat-card-content>
+                <form class="example-form">
+                    <table class="example-full-width" cellspacing="0">
+                      <tr>
+                        <td>
+                          <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Username" [(ngModel)]="auth.username" name="username" required>
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                      <td><mat-form-field class="example-full-width">
+                        <input matInput placeholder="Password" [(ngModel)]="auth.password"type="password" name="password" required>
+                      </mat-form-field></td>
+                    </tr></table>
+                  </form>
+
+                <div class="d-grid">
+                    <button mat-raised-button color="primary">Ingresar</button>
+                </div>
+                <br>
+                <div *ngIf="errorMessage" class="text-center error-message alert alert-dismissible alert-danger">
+                    {{ errorMessage }}
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </form>
+</div>
