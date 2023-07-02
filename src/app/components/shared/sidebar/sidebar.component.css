@@ -1,31 +1,25 @@
-.side-bar{
+.side-bar {
     position: absolute;
-    left:10%;
+    left: 10%;
     width: 15%;
-    top:10%;
-    
+    top: 10%;
 }
-.checkbox{
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    box-sizing: border-box;
-    background-color: transparent;
+
+.checkbox {
     text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Lato","Helvetica Neue",Arial,sans-serif;
-    display: block;
-    margin-bottom: 12px;
-    position: relative;
-    transition: color .25s linear;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #162a36;
-    margin-top: -5px;
-    padding-left: 28px;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
 }
-mat-checkbox{
+
+mat-checkbox {
     display: block;
+}
+
+.space {
+    padding-left: 10px;
+}
+
+.up-icon{
+    padding-bottom: 15px;
 }
 
 .etiqueta {
@@ -37,22 +31,28 @@ mat-checkbox{
     color: #000000;
 }
 
+.money-sign {
+    font-size: 25px;
+    font-weight: 200;
+}
 mat-slider {
-    width: 250px; /* Ajusta el valor del ancho según tus necesidades */
-  }
+    width: 250px;
+}
 
-  .price-inputs-container {
+.price-inputs-container {
     display: flex;
     align-items: center;
-  }
+}
+
 .panel-title {
     display: block;
 }
-.btn-clear{
-    margin-left:90px;
+
+.btn-clear {
+    margin-left: 90px;
 }
 
-.top-input{
+.top-input {
     min-width: 30px;
     max-width: 220px;
     padding: 17px 15px;
@@ -63,4 +63,4 @@ mat-slider {
     min-width: 30px;
     max-width: 100px;
     width: 100%;
-  }
+}

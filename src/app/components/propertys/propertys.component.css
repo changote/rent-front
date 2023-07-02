@@ -1,0 +1,40 @@
+.propertys-container{
+    position: absolute;
+    left: 26%;
+    top: 10%;
+}
+.asd{
+    text-decoration: none;
+}
+mat-card {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 400px;
+}
+.card-img {
+    margin: -16px;
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    min-width: 200px;
+    height: 400px;
+    border-radius: 4px 0 0 4px;
+    object-fit: cover
+}
+.font-title {
+    font: 200 20px/26px Montserrat,sans-serif;
+}
+.font-subtitle {
+    font: 200 20px/26px Montserrat,sans-serif;
+}
+.text-margin{
+    margin-left: 2%;
+}
+.button-property{
+    top: 80%;
+    right: 3%;
+    position: absolute;
+}
+.yellow-star {
+    color: rgb(219, 142, 27);
+  }

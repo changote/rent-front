@@ -10,7 +10,7 @@ import { AuthUser } from 'src/app/entity/AuthUser';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   auth: AuthUser = { username: '', password: '' };
@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
         console.log('Inicio exitoso',this.auth,response);
         this.router.navigate(['/']);
       },
-      error: (error) => {
-        this.errorMessage = 'Credenciales invalidas';
+      error: error => {
+        this.errorMessage = 'Credenciales invalidas',error;
       }});
     }
   }

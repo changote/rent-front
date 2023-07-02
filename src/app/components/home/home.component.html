@@ -1,6 +1,15 @@
-<div class="app-container">
-    <app-toolbar></app-toolbar>
-    <app-sidebar></app-sidebar>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  </div>
+<div>
+  <form class="example-form">
+    <mat-form-field class="field">
+      <mat-label class="label">A dónde vamos?</mat-label>
+      <input type="text" placeholder="Ciudad destino" aria-label="Number" matInput [formControl]="myControl"
+        [matAutocomplete]="auto" (input)="onInputChange()">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of datos" [value]="option.name" (click)="cityId = option.cityId">
+          {{option.name}}
+        </mat-option>
+      </mat-autocomplete>
+      <button class="button" matSuffix mat-button (click)="onSearchClick(cityId)"><mat-icon class="search-icon">search</mat-icon></button>
+    </mat-form-field>
+  </form>
+</div>

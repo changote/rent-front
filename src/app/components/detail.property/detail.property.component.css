@@ -1,0 +1,20 @@
+.container {
+    margin: 3% 8% 0;
+}
+
+.yellow-star {
+    color: rgb(219, 142, 27);
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .column {
+    margin-right: 10px;
+    padding-left: 10px;
+  }

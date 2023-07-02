@@ -1,0 +1,41 @@
+<!-- <app-detail-toolbar></app-detail-toolbar> -->
+<div>
+    <mat-card class="container">
+        <mat-card-header>{{ property.title }}</mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content><div style="display: flex; flex-direction: row;" *ngIf="property.opinion.stars != 0; else elseBlock">
+            <div *ngFor="let star of getStarsArray(property.opinion.stars)">
+              <mat-icon class="yellow-star">star</mat-icon>
+            </div>
+          
+          <div *ngFor="let blackStar of getStarsArray(5-property.opinion.stars)">
+            <mat-icon class="yellow-star">star_border</mat-icon>
+          </div>
+        </div>
+        <ng-template #elseBlock>Sin reseñas</ng-template>
+
+        <img mat-card-md-image class="card-img" src={{property.photo}}>
+        <h3>DESCRIPCION</h3>
+        <h4>{{ property.description }}</h4>
+
+        <h4>Ultima actualizacion el {{ property.whenUpdated }}</h4>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="container">
+        <div class="row">
+          <div class="column">
+            {{ property.rooms }} Habitaciones
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            {{ property.bathrooms }} Baños
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            De 1 a {{ property.capacity }} personas
+          </div>
+        </div>
+      </mat-card>
+</div>

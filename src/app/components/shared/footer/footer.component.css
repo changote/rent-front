@@ -1,36 +1,17 @@
 .footer {
-    position: relative;
-  bottom: 0;
-  height: 60px;
-  width:100%;
-    color: rgb(0, 0, 0);
-  
-    &__text {
-      font-weight: 400;
-      font-size: 12px;
-      text-align: center;
-      span {
-        font-weight: 700;
-      }
-      
-    }
-  }
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgb(3, 119, 148);
+  color: rgb(253, 253, 253);
+  text-align: center;
+  min-width: 100vh;
+}
 
-  /* .mat-footer {
+/* .mat-footer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 10px;
-  } */
-  
-  .mat-footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .mat-footer-inner span {
-    font-size: 14px;
-  }
-  
+} */

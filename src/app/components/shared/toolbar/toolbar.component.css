@@ -1,0 +1,21 @@
+.right-side {
+    position: relative;
+    margin-left: 40%;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .label {
+    font-size: 14px;
+  }
+  
+  .button-row {
+    margin-left: 15%;
+  }
+  
+  .principal-font {
+    font-size: 30px;
+  }

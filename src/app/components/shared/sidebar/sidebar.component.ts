@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit{
+  miFormulario!: FormGroup;
 
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.miFormulario = this.formBuilder.group({
+      // Definir los campos del formulario y sus valores predeterminados
+    });
+  }
   minPrice = 0;
   maxPrice = 100000;
   selectedMinPrice = 5000; // Valor predeterminado del mínimo
@@ -16,16 +25,14 @@ export class SidebarComponent {
   selectedFeatures: string[] = [];
   selectedCapacities: string[] = [];
 
+  cantDays: string[] = ['Dia', 'Semana', 'Quincena', 'Mes'];
   propertyTypes: string[] = ['Casa', 'Cabaña', 'Departamento'];
-  features: string[] = ['Aire acondicionado', 'Calefacción', 'DVD player', 'Garaje', 'Jardín', 'Piscina', 'Televisión', 'Wi-Fi', 'Se aceptan mascotas', 'Grupos de jóvenes'];
+  features: string[] = ['Aire acondicionado', 'Calefacción', 'Garaje', 'Jardín', 'Piscina', 'Televisión', 'Wi-Fi', 'Se aceptan mascotas'];
   capacities: string[] = ['5 personas', '6 personas', '8 personas'];
 
-  toggleSelection(value: string, array: string[]) {
-    if (array.includes(value)) {
-      array.splice(array.indexOf(value), 1);
-    } else {
-      array.push(value);
-    }
+  borrarFiltros() {
+    this.miFormulario.reset();
   }
+  
   
 }

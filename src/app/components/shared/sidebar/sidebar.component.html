@@ -1,99 +1,69 @@
 <mat-card class="side-bar">
-    
+
 
     <div class="price-inputs-container">
-    <mat-card-title></mat-card-title>
-    <mat-card-header>
-        <h1>Filtrar por</h1>
-    </mat-card-header>
-    <button mat-icon-button class="btn btn-simple btn-clear"><mat-icon>clear</mat-icon></button>
-</div>
+        <mat-card-title></mat-card-title>
+        <mat-card-header>
+            <h1>Filtrar por</h1>
+        </mat-card-header>
+        <button mat-icon-button (click)="borrarFiltros()"
+            class="btn btn-simple btn-clear"><mat-icon>clear</mat-icon></button>
+    </div>
     <mat-divider></mat-divider>
-    <mat-card-content>
-        
+        <mat-card-content>
             <div>
                 <mat-form-field class="top-input">
                     <mat-label>Cantidad de dias</mat-label>
-                    <mat-select >
-                      <mat-option value="Dia">Dia</mat-option>
-                      <mat-option value="Semana">Semana</mat-option>
-                      <mat-option value="Quincena">Quincena</mat-option>
-                      <mat-option value="Mes">Mes</mat-option>
+                    <mat-select>
+                        <div *ngFor="let cant of cantDays">
+                            <mat-option value="cant">{{cant}}</mat-option>
+                        </div>
                     </mat-select>
-                  </mat-form-field>
+                </mat-form-field>
             </div>
             <mat-panel-title class="panel-title etiqueta">
                 Rango de precio
             </mat-panel-title>
-              <div class="price-inputs-container">
-                <mat-form-field class="example-form">
-                  <mat-label>Minimo</mat-label>
-                  <span matPrefix>$ &nbsp;</span>
-                  <input matInput >
+            <div class="price-inputs-container">
+                <mat-form-field class="example-form space">
+                    <mat-label>Minimo</mat-label>
+                    <span matPrefix class="money-sign">$ &nbsp;</span>
+                    <input matInput>
                 </mat-form-field>
-                <mat-icon _ngcontent-fhg-c258="" role="img" class="mat-icon notranslate icon material-icons mat-icon-no-color" aria-hidden="true">remove</mat-icon>
+                <mat-icon class="up-icon">remove</mat-icon>
                 <mat-form-field class="example-form">
                     <mat-label>Maximo</mat-label>
-                    <span matPrefix>$ &nbsp;</span>
+                    <span matPrefix class="money-sign">$ &nbsp;</span>
                     <input matInput>
-                  </mat-form-field>
-                </div>
-        <mat-divider></mat-divider>
+                </mat-form-field>
+            </div>
+            <mat-divider></mat-divider>
+            <mat-panel-title class="panel-title etiqueta">
+                Tipo de propiedad
+            </mat-panel-title>
+            <div *ngFor="let type of propertyTypes">
+                <mat-checkbox>
+                    {{type}}
+                </mat-checkbox>
+            </div>
+            <mat-divider></mat-divider>
+            <mat-panel-title class="panel-title etiqueta">
+                Características
+            </mat-panel-title>
+            <div *ngFor="let features of features">
+                <mat-checkbox>
+                    {{features}}
+                </mat-checkbox>
+            </div>
+            <mat-divider></mat-divider>
+            <mat-panel-title class="panel-title etiqueta">
+                Cantidad de personas
+            </mat-panel-title>
+            <div *ngFor="let capacity of capacities">
+                <mat-checkbox>
+                    {{capacity}}
+                </mat-checkbox>
+            </div>
 
-        <mat-panel-title class="panel-title etiqueta">
-            Tipo de propiedad
-        </mat-panel-title>
-        <mat-checkbox>
-            Casa
-        </mat-checkbox>
-        <mat-checkbox>
-            Cabaña
-        </mat-checkbox>
-        <mat-checkbox>
-            Departamento
-        </mat-checkbox>
-        <mat-divider></mat-divider>
-        <mat-panel-title class="panel-title etiqueta">
-            Características
-        </mat-panel-title>
-        <mat-checkbox>
-            Aire acondicionado
-        </mat-checkbox>
-        <mat-checkbox>
-            Calefacción
-        </mat-checkbox>
-        <mat-checkbox>
-            Garaje
-        </mat-checkbox>
-        <mat-checkbox>
-            Jardín
-        </mat-checkbox>
-        <mat-checkbox>
-            Piscina
-        </mat-checkbox>
-        <mat-checkbox>
-            Televisión
-        </mat-checkbox>
-        <mat-checkbox>
-            Wi-Fi
-        </mat-checkbox>
-        <mat-checkbox>
-            Se aceptan mascotas
-        </mat-checkbox>
-        <mat-divider></mat-divider>
-
-        <mat-panel-title class="panel-title etiqueta">
-            Cantidad de personas
-        </mat-panel-title>
-        <mat-checkbox>
-            5 personas
-        </mat-checkbox>
-        <mat-checkbox>
-            6 personas
-        </mat-checkbox>
-        <mat-checkbox>
-            8 personas
-        </mat-checkbox>
-
-    </mat-card-content>
+        </mat-card-content>
 </mat-card>

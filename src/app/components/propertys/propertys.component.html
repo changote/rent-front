@@ -1,6 +1,30 @@
-<app-toolbar></app-toolbar>
-<p>propertys works!</p>
-<div>
+<app-sidebar></app-sidebar>
+<div class="propertys-container">
+  <mat-card *ngFor="let property of datos" (click)="goToDetail(property.propertyId)">
+    <mat-card-header>
+      <img mat-card-md-image class="card-img" src={{property.photo}}>
+      <mat-card-content class="text-margin">
+        <mat-card-title class="font-title">{{property.title}}</mat-card-title>
+        <div style="display: flex; flex-direction: row;" *ngIf="property.opinion.stars != 0; else elseBlock">
+          <div *ngFor="let star of getStarsArray(property.opinion.stars)">
+            <mat-icon class="yellow-star">star</mat-icon>
+          </div>
+        
+        <div *ngFor="let blackStar of getStarsArray(5-property.opinion.stars)">
+          <mat-icon class="yellow-star">star_border</mat-icon>
+        </div>
+      </div>
+      <ng-template #elseBlock>Sin reseñas</ng-template>
+
+        <mat-card-subtitle class="font-subtitle">{{property.description}}</mat-card-subtitle>
+      </mat-card-content>
+
+      <button class="button-property" mat-fab extended color="primary">
+        <mat-icon >open_in_new</mat-icon>
+        Mas info
+      </button>
     
+    </mat-card-header>
+  
+  </mat-card>
 </div>
-<app-footer></app-footer>
