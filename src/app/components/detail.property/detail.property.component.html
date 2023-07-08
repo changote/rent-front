@@ -1,8 +1,7 @@
 <!-- <app-detail-toolbar></app-detail-toolbar> -->
 <div>
     <mat-card class="container">
-        <mat-card-header>{{ property.title }}</mat-card-header>
-        <mat-divider></mat-divider>
+        <mat-card-header class="title">{{ property.title }}</mat-card-header>
         <mat-card-content><div style="display: flex; flex-direction: row;" *ngIf="property.opinion.stars != 0; else elseBlock">
             <div *ngFor="let star of getStarsArray(property.opinion.stars)">
               <mat-icon class="yellow-star">star</mat-icon>
