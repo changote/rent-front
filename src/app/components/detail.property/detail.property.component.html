@@ -1,8 +1,9 @@
 <!-- <app-detail-toolbar></app-detail-toolbar> -->
 <div>
     <mat-card class="container">
-        <mat-card-header class="title">{{ property.title }}</mat-card-header>
-        <mat-card-content><div style="display: flex; flex-direction: row;" *ngIf="property.opinion.stars != 0; else elseBlock">
+        <mat-card-title class="title">{{ property.title }}</mat-card-title>
+        <mat-card-subtitle class="price">{{ property.price }}</mat-card-subtitle>
+        <mat-card-content><div class="stars" *ngIf="property.opinion.stars != 0; else elseBlock">
             <div *ngFor="let star of getStarsArray(property.opinion.stars)">
               <mat-icon class="yellow-star">star</mat-icon>
             </div>
@@ -19,8 +20,6 @@
 
         <h4>Ultima actualizacion el {{ property.whenUpdated }}</h4>
         </mat-card-content>
-    </mat-card>
-    <mat-card class="container">
         <div class="row">
           <div class="column">
             {{ property.rooms }} Habitaciones
@@ -38,3 +37,4 @@
         </div>
       </mat-card>
 </div>
+<app-footer></app-footer>

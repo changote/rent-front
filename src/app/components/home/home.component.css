@@ -1,27 +1,48 @@
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-    margin-top: 17%;
-    margin-left: 33%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 300px;
+}
+
+mat-form-field {
+  width: 30%;
+  position: absolute;
+  height: 80px;
+  border-radius: 15%;
+}
+
+.search-icon {
+  font-size: 20px
+}
+
+button {
+  padding: 30px;
+}
+
+@media only screen and (max-width: 575px) {
+  .example-form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50%;
   }
-  
-  .example-full-width {
-    width: 100%;
-  }
-  .label{
-    font-size: 20px;
-    font-weight: 300px;
-  }
-  mat-form-field{
-    width: 30%;
+
+  mat-form-field {
+    width: 350px;
     position: absolute;
-    height: 80px;;
+    height: 80px;
     border-radius: 15%;
   }
-  .search-icon{
-    font-size:20px
-  }
-  button{
-    padding: 30px;
-  }
+}

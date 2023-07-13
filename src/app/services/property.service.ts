@@ -6,10 +6,10 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class PropertyService {
-
-  private cityUrl = 'http://localhost:8090/propertysforhome'; // URL de la API
-  private idUrl = 'http://localhost:8090/citybypropertyid';
-  private propertyUrl = 'http://localhost:8090/propertybyid';
+  private ipLocal = '10.62.253.3';
+  private cityUrl = 'http://'+this.ipLocal+ ':8090/propertysforhome'; // URL de la API
+  private idUrl = 'http://'+this.ipLocal+ ':8090/citybypropertyid';
+  private propertyUrl = 'http://'+this.ipLocal+ ':8090/propertybyid';
 
   constructor(private http: HttpClient) { }
 

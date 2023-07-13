@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HomeService {
-
-  private apiUrl = 'http://localhost:8090/citysbyname'; // URL de la API
+  private ipLocal = '10.62.253.3';
+  private apiUrl = 'http://'+this.ipLocal+ ':8090/citysbyname'; // URL de la API
 
   constructor(private http: HttpClient) { }
 

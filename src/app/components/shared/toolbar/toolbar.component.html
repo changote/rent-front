@@ -1,11 +1,11 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="toolbar"color="primary">
   <div class="button-row principal-font">
-    <a class="link" [routerLink]="'/'"> <mat-icon>airplanemode_active</mat-icon> Alquileres Luciana</a>
+    <a class="link" [routerLink]="'/'"> <img src="../../../../assets/logo/logo-toolbar.png" alt="renta-logo" class="img-toolbar"></a>
   </div>
   <div class="right-side">
     <a class="link" [routerLink]="'/login'">Ingresar</a>
-    <button mat-flat-button color="primary">
-      <a mat-flat-button href="https://www.google.com/" target="_blank">Publica ahora</a>
+    <button class="button-publicar" mat-flat-button color="" (click)="openLink()">
+      Publica ahora
     </button>
   </div>
 </mat-toolbar>

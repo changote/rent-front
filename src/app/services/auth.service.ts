@@ -11,9 +11,9 @@ import { CookieService } from 'ngx-cookie-service';
   providedIn: 'root'
 })
 export class AuthService {
-
+  private ipLocal = '10.62.253.3';
   constructor(private http: HttpClient, private cookieService: CookieService) {}
-  private loginUrl = 'http://localhost:8090/login';
+  private loginUrl = 'http://'+this.ipLocal+ ':8090/login';
 
   login(user: AuthUser): Observable<any> {
     let headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');

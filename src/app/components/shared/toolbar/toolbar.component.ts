@@ -20,4 +20,8 @@ export class ToolbarComponent {
   constructor(private authService: AuthService, private cookieService: CookieService, private router: Router){
     
   }
+
+  openLink(){
+    
+  }
 }

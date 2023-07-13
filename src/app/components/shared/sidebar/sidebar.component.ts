@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
@@ -15,6 +15,7 @@ export class SidebarComponent implements OnInit{
     this.miFormulario = this.formBuilder.group({
       // Definir los campos del formulario y sus valores predeterminados
     });
+    this.onWindowResize(event);
   }
   minPrice = 0;
   maxPrice = 100000;
@@ -32,6 +33,17 @@ export class SidebarComponent implements OnInit{
 
   borrarFiltros() {
     this.miFormulario.reset();
+  }
+
+  showSidebar: boolean = true;
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: any) {
+    this.showSidebar = window.innerWidth >= 575;
+  }
+
+  toggleSidebar() {
+    this.showSidebar = !this.showSidebar;
   }
   
   

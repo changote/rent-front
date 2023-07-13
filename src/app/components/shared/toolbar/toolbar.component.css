@@ -1,21 +1,59 @@
 .right-side {
+  position: relative;
+  margin-left: 900px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+.button-row {
+  margin-left: 15%;
+}
+
+.principal-font {
+  font-size: 50px;
+}
+
+.img-toolbar {
+  width: 200px;
+  height: auto;
+  position: relative;
+}
+
+
+.toolbar {
+  height: 100px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 575px) {
+
+  .img-toolbar {
+    width: 100px;
+    height: auto;
     position: relative;
-    margin-left: 40%;
   }
-  
-  .link {
-    text-decoration: none;
-    color: white;
+
+  .toolbar {
+    height: 50px;
+    width: 100%;
   }
-  
-  .label {
-    font-size: 14px;
-  }
-  
   .button-row {
-    margin-left: 15%;
+    margin-left: 3%;
   }
+
+  .right-side {
+    position: relative;
+    margin-left: 20px;
+  }
+
+  .link {
+    font-size: 20px;
+  }
+}
+
   
-  .principal-font {
-    font-size: 30px;
-  }

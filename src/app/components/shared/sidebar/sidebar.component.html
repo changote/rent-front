@@ -1,4 +1,4 @@
-<mat-card class="side-bar">
+<mat-card class="side-bar" *ngIf="showSidebar">
 
 
     <div class="price-inputs-container">
@@ -67,3 +67,9 @@
 
         </mat-card-content>
 </mat-card>
+<div *ngIf="!showSidebar"  class="filter-button">
+<button (click)="toggleSidebar()" mat-fab extended color="primary">
+    <mat-icon >open_in_new</mat-icon>
+    Filtrar
+  </button>
+</div>

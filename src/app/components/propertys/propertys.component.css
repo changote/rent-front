@@ -1,16 +1,19 @@
-.propertys-container{
+.propertys-container {
     position: absolute;
     left: 26%;
     top: 10%;
 }
-.asd{
+
+.asd {
     text-decoration: none;
 }
+
 mat-card {
     width: 100%;
     margin-bottom: 1rem;
     height: 400px;
 }
+
 .card-img {
     margin: -16px;
     position: relative;
@@ -21,20 +24,74 @@ mat-card {
     border-radius: 4px 0 0 4px;
     object-fit: cover
 }
+
 .font-title {
-    font: 200 20px/26px Montserrat,sans-serif;
+    font: 200 20px/26px Montserrat, sans-serif;
 }
+
 .font-subtitle {
-    font: 200 20px/26px Montserrat,sans-serif;
+    font: 200 20px/26px Montserrat, sans-serif;
 }
-.text-margin{
+
+.text-margin {
     margin-left: 2%;
 }
-.button-property{
+
+.button-property {
     top: 80%;
     right: 3%;
     position: absolute;
 }
+
 .yellow-star {
     color: rgb(219, 142, 27);
-  }
+}
+
+.price {
+    font-size: 30px;
+    position: absolute;
+    right: 3%;
+}
+
+@media screen and (min-width: 1200px) {
+    
+}
+
+@media only screen and (max-width: 575px){
+    .propertys-container {
+        position: absolute;
+        top: 110px;
+        width: 90%;
+        left: 5%;
+    }
+
+    .price {
+        font-size: 20px;
+        position: relative;
+        margin: 0;
+        padding-left: 9px;
+    }
+
+    .button-property {
+        top: 140px;
+        right: 10px;
+        position: absolute;
+    }
+
+    mat-card {
+        width: 100%;
+        margin-bottom: 1rem;
+        height: 200px;
+    }
+
+    .card-img {
+        margin: -16px;
+        position: relative;
+        overflow: hidden;
+        width: 25%;
+        min-width: 200px;
+        height: 200px;
+        border-radius: 4px 0 0 4px;
+        object-fit: cover
+    }
+}

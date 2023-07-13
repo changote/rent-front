@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Property } from 'src/app/entity/Property';
 import { PropertyService } from 'src/app/services/property.service';
@@ -38,5 +38,13 @@ export class PropertysComponent {
         console.log('Error al obtener los datos:', error);
       }}
     );
+    this.onWindowResize(event);
+  }
+
+  showDescription: boolean = true;
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: any) {
+    this.showDescription = window.innerWidth >= 575;
   }
 }
